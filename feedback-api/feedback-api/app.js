@@ -1,9 +1,50 @@
-const express = require("express");
+// const express = require("express");
 
+// const {
+//   getAllFeedbacks,
+//   getFeedbackById,
+//   createFeedback,
+//   updateFeedback,
+//   deleteFeedback,
+// } = require("./feedbackHandlers");
+
+// const app = express();
+
+// app.use(express.json());
+
+// app.get("/feedback", getAllFeedbacks);
+// app.post("/feedback", createFeedback);
+// app.get("/feedback/:feedbackId", getFeedbackById);
+// app.patch("/feedback/:feedbackId", updateFeedback);
+// app.delete("/feedback/:feedbackId", deleteFeedback);
+
+// const PORT = 4000;
+
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}`);
+// });
+
+const express = require("express");
 const app = express();
 
-const PORT = 3000;
+const {
+  getAllFeedbacks,
+  getFeedbackById,
+  createFeedback,
+  updateFeedback,
+  deleteFeedback,
+} = require("./feedbackHandlers");
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.use(express.json());
+
+app.get("/feedback", getAllFeedbacks);
+app.post("/feedback", createFeedback);
+app.get("/feedback/:feedbackId", getFeedbackById);
+app.patch("/feedback/:feedbackId", updateFeedback);
+app.delete("/feedback/:feedbackId", deleteFeedback);
+
+const port = 4000;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

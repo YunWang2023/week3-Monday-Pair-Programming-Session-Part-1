@@ -46,6 +46,9 @@ function updateOneById(id, updateData) {
         if (updateData.rating) {
             feedback.rating = updateData.rating;
         }
+        if (updateData.platform) {
+            feedback.platform = updateData.platform;
+        }
         return feedback;
     }
     else {

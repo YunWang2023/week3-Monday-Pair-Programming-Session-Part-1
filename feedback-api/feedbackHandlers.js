@@ -1,4 +1,4 @@
-
+const Feedback = require("./feedbackLib");
 
 const getAllFeedbacks = (req, res) => {
   res.json({ message: "Hello from getAllFeedbacks" });

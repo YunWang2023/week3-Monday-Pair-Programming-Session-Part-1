@@ -63,24 +63,24 @@ function deleteOneById(id) {
         return false;
 }
 
-// if (require.main === module) {
-//         const result = addOne(
-//             "John Smith",
-//             "Great session on React components!",
-//             5,
-//             "mobile"
-//         );
+if (require.main === module) {
+        const result = addOne(
+            "John Smith",
+            "Great session on React components!",
+            5,
+            "mobile"
+        );
 
-//         console.log(result);
-//     };
+        console.log(result);
+    };
 
 
     module.exports = {
     addOne,
     getAll,
-    // findById,
-    // updateOneById,
-    // deleteOneById
+    findById,
+    updateOneById,
+    deleteOneById
 
     };
 

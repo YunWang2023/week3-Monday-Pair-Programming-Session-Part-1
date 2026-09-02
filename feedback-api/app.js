@@ -12,6 +12,8 @@ const {
 
 app.use(express.json());
 
+// routes
+
 app.get("/feedback", getAllFeedbacks);
 app.post("/feedback", createFeedback);
 app.get("/feedback/:feedbackId", getFeedbackById);
